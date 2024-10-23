@@ -8,12 +8,12 @@ import inquirer  from 'inquirer';
 import figlet from 'figlet'
 import nanospinner, { createSpinner } from 'nanospinner'
 import cityNames from './cityNames.json'assert { type: 'json' };
+require('dotenv').config();
 
 
 
-
-
-
+const BASE_URL = process.env.BASE_URL;
+const API_KEY = process.env.API_KEY;
 const noWhere = 'No Where'
 let cityName ;
 let unit = 'metric' ;
